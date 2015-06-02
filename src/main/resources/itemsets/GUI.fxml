@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="contentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="itemsets.Controller">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="103.0" layoutY="37.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="170.0" fitWidth="448.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="100.0" prefWidth="414.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label text="Select League of Legends Directory:" textFill="WHITE">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+                           <children>
+                              <TextField fx:id="dirInput" editable="false" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="chooseButton" mnemonicParsing="false" onAction="#leagueChooser" text="Select" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </padding>
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="25.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="startButton" mnemonicParsing="false" onAction="#processChampions">
+                                 <graphic>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@rocket.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="Progress" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ProgressBar fx:id="progress" prefHeight="18.0" prefWidth="483.0" progress="0.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
