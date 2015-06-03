@@ -49,9 +49,8 @@ public class FileLoader extends Thread {
 
             try {
                 FileUtils.copyURLToFile(url, f);
-            } catch (FileNotFoundException e) {
-            } catch (ConnectException e) {
-                e.printStackTrace();
+            } catch(IOException e) {
+                FileUtils.deleteQuietly(f);
             }
         }
     }
